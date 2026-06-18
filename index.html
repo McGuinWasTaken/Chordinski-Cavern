@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chordinski — security engineer, builder, gamer, and perpetual lab operator.">
+  <meta name="theme-color" content="#090607">
+  <title>Chordinski // Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Chordinski home">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span class="brand-copy">
+        <strong>CHORDINSKI</strong>
+        <small>USER PROFILE // ONLINE</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="#profile">Profile</a>
+      <a href="#work">Work</a>
+      <a href="#lab">Lab</a>
+      <a href="#terminal">Terminal</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="profile-hero panel" id="profile" aria-labelledby="profile-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="avatar-column">
+        <div class="avatar-frame">
+          <img src="assets/avatar.jpg" alt="Chordinski's red-toned anime profile avatar">
+          <span class="avatar-status" title="Online"></span>
+          <span class="corner corner-tl" aria-hidden="true"></span>
+          <span class="corner corner-tr" aria-hidden="true"></span>
+          <span class="corner corner-bl" aria-hidden="true"></span>
+          <span class="corner corner-br" aria-hidden="true"></span>
+        </div>
+        <div class="status-card">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Currently online</strong>
+            <span id="local-clock">System time loading…</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SECURITY ENGINEER // OFFENSIVE OPERATIONS</p>
+        <h1 id="profile-title" class="glitch" data-text="CHORDINSKI">CHORDINSKI</h1>
+        <p class="alias">also operating as <span>Matthew</span></p>
+        <p class="hero-intro">
+          I break systems to understand them, build labs to sharpen the process,
+          and spend the rest of my time somewhere between a terminal window and a game lobby.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://steamcommunity.com/id/mcguin/" target="_blank" rel="noreferrer">
+            View Steam profile
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <button class="button button-ghost" type="button" id="copy-handle" data-copy="Chordinski">
+            Copy handle
+          </button>
+        </div>
+      </div>
+
+      <aside class="profile-stats" aria-label="Profile stats">
+        <div class="level-display">
+          <div class="level-ring">
+            <span>28</span>
+          </div>
+          <div>
+            <small>PROFILE</small>
+            <strong>LEVEL</strong>
+          </div>
+        </div>
+        <dl>
+          <div><dt>Role</dt><dd>Security Engineer</dd></div>
+          <div><dt>Focus</dt><dd>Offensive Security</dd></div>
+          <div><dt>Location</dt><dd>New York, USA</dd></div>
+          <div><dt>Mode</dt><dd>Remote Operator</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <div class="content-grid">
+      <div class="main-column">
+        <section class="panel showcase reveal" id="work" aria-labelledby="work-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">FEATURED SHOWCASE</p>
+              <h2 id="work-title">What I do</h2>
+            </div>
+            <span class="panel-code">01 // OPERATIONS</span>
+          </div>
+
+          <div class="showcase-feature">
+            <div class="feature-visual" aria-hidden="true">
+              <div class="radar">
+                <span class="radar-sweep"></span>
+                <i class="ping ping-a"></i>
+                <i class="ping ping-b"></i>
+                <i class="ping ping-c"></i>
+              </div>
+              <div class="visual-label">ATTACK SURFACE // ACTIVE</div>
+            </div>
+            <div class="feature-copy">
+              <span class="section-kicker">AUTONOMOUS PENTESTING</span>
+              <h3>Finding the path before an attacker does.</h3>
+              <p>
+                My work centers on validating real attack paths, interpreting technical findings,
+                and turning automated testing into security decisions people can act on.
+              </p>
+              <ul class="compact-list">
+                <li>Attack-path validation</li>
+                <li>Exposure analysis</li>
+                <li>Technical reporting</li>
+                <li>Remediation guidance</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel reveal" id="lab" aria-labelledby="lab-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">HOMELAB NETWORK</p>
+              <h2 id="lab-title">The environment</h2>
+            </div>
+            <span class="panel-code">02 // CYBERIA.LAB</span>
+          </div>
+
+          <div class="network-map" aria-label="Simplified homelab network diagram">
+            <div class="network-node root-node">
+              <span class="node-icon">FW</span>
+              <strong>pfSense</strong>
+              <small>Gateway / Segmentation</small>
+            </div>
+            <span class="network-line line-a" aria-hidden="true"></span>
+            <span class="network-line line-b" aria-hidden="true"></span>
+            <span class="network-line line-c" aria-hidden="true"></span>
+            <span class="network-line line-d" aria-hidden="true"></span>
+            <div class="network-node node-a">
+              <span class="node-icon">AD</span>
+              <strong>Corporate</strong>
+              <small>Windows / Active Directory</small>
+            </div>
+            <div class="network-node node-b">
+              <span class="node-icon">SI</span>
+              <strong>Security</strong>
+              <small>Security Onion / Telemetry</small>
+            </div>
+            <div class="network-node node-c">
+              <span class="node-icon">PT</span>
+              <strong>Attack</strong>
+              <small>Kali / Assessment Tools</small>
+            </div>
+            <div class="network-node node-d">
+              <span class="node-icon">MX</span>
+              <strong>Isolated</strong>
+              <small>Malware / DFIR Analysis</small>
+            </div>
+          </div>
+
+          <div class="skill-groups">
+            <article>
+              <h3>Offense</h3>
+              <div class="tag-cloud">
+                <span>NodeZero</span><span>Nessus</span><span>BloodHound</span>
+                <span>Impacket</span><span>Metasploit</span><span>Responder</span>
+              </div>
+            </article>
+            <article>
+              <h3>Defense</h3>
+              <div class="tag-cloud">
+                <span>Security Onion</span><span>Splunk</span><span>Elastic</span>
+                <span>Wireshark</span><span>Sysmon</span><span>Wazuh</span>
+              </div>
+            </article>
+            <article>
+              <h3>Systems</h3>
+              <div class="tag-cloud">
+                <span>Linux</span><span>Windows Server</span><span>pfSense</span>
+                <span>Docker</span><span>Python</span><span>PowerShell</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel terminal-panel reveal" id="terminal" aria-labelledby="terminal-title">
+          <div class="terminal-bar">
+            <div class="terminal-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h2 id="terminal-title">chordinski@cyberia:~</h2>
+            <span>bash</span>
+          </div>
+          <div class="terminal-output" id="terminal-output" aria-live="polite">
+            <p><span class="prompt">$</span> ./identify --user chordinski</p>
+            <p class="terminal-response">Security engineer. Lab builder. Gamer. Curious by default.</p>
+            <p class="terminal-hint">Type <strong>help</strong> to view available commands.</p>
+          </div>
+          <form class="terminal-input-row" id="terminal-form">
+            <label for="terminal-input" class="sr-only">Terminal command</label>
+            <span class="prompt">$</span>
+            <input id="terminal-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="enter command…">
+          </form>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="panel side-panel reveal" aria-labelledby="about-title">
+          <div class="panel-heading compact">
+            <h2 id="about-title">About</h2>
+            <span class="panel-code">BIO</span>
+          </div>
+          <p>
+            Cybersecurity graduate turned security engineer, with a preference for practical testing,
+            careful analysis, and environments that can be dismantled and rebuilt without a change ticket.
+          </p>
+          <div class="quote-block">
+            <span>“</span>
+            <p>Understand the system. Find the edge. Document the path.</p>
+          </div>
+        </section>
+
+        <section class="panel side-panel reveal" aria-labelledby="activity-title">
+          <div class="panel-heading compact">
+            <h2 id="activity-title">Recent activity</h2>
+            <span class="panel-code">LOG</span>
+          </div>
+          <ol class="activity-list">
+            <li>
+              <span class="activity-icon">01</span>
+              <div><strong>Attack simulation</strong><small>Validated exposed paths and remediation priorities.</small></div>
+            </li>
+            <li>
+              <span class="activity-icon">02</span>
+              <div><strong>Lab rebuild</strong><small>Segmented services across dedicated VLANs.</small></div>
+            </li>
+            <li>
+              <span class="activity-icon">03</span>
+              <div><strong>Detection tuning</strong><small>Reviewed endpoint and network telemetry.</small></div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="panel side-panel reveal" aria-labelledby="interests-title">
+          <div class="panel-heading compact">
+            <h2 id="interests-title">Beyond the terminal</h2>
+            <span class="panel-code">AFK</span>
+          </div>
+          <div class="interest-grid">
+            <div><span>01</span><strong>PC Gaming</strong></div>
+            <div><span>02</span><strong>Homelabbing</strong></div>
+            <div><span>03</span><strong>Hardware</strong></div>
+            <div><span>04</span><strong>Security Research</strong></div>
+          </div>
+        </section>
+
+        <section class="panel side-panel contact-panel reveal" aria-labelledby="contact-title">
+          <p class="eyebrow">CONNECTION REQUEST</p>
+          <h2 id="contact-title">Find me online.</h2>
+          <p>The Steam profile that inspired this interface is one click away.</p>
+          <a class="button button-primary full-width" href="https://steamcommunity.com/id/mcguin/" target="_blank" rel="noreferrer">Open Steam</a>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>CHORDINSKI // <span id="footer-year"></span></span>
+    <span>STATUS: <b>ALL SYSTEMS NOMINAL</b></span>
+    <a href="#top">Return to top ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Handle copied.</div>
+</body>
+</html>
