@@ -113,7 +113,6 @@ const terminalCommands = {
     'steam      open the Steam profile',
     'contact    display public handle',
     'clear      clear this terminal',
-    'secret     this should appear after running help'
   ],
   about: [
     'Chordinski is a security engineer focused on offensive operations,',
