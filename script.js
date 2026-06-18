@@ -104,6 +104,7 @@ const terminalForm = document.querySelector('#terminal-form');
 const terminalInput = document.querySelector('#terminal-input');
 const terminalOutput = document.querySelector('#terminal-output');
 
+// Have to add this because pushing is actually one behind last commit, thank you Github...
 const terminalCommands = {
   help: [
     'Available commands:',
