@@ -131,7 +131,11 @@ const terminalCommands = {
   ],
   contact: [
     'PUBLIC HANDLE :: Chordinski',
-    'STEAM         :: steamcommunity.com/id/mcguin/'
+    'STEAM         :: steamcommunity.com/id/mcguin/',
+    'DISCORD       :: mcguin'
+  ],
+  secret:  [
+    'You gay as hell for looking in the Sources tab...'
   ]
 };
 
